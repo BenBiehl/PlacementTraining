@@ -6,13 +6,12 @@
 
 class PlacementTraining : public BakkesMod::Plugin::BakkesModPlugin
 {
+private:
+	bool placementEnabled = false;
+
 public:
 	virtual void onLoad();
 	virtual void onUnload();
-
-	void loadHooks();
-
-private:
-	void Log(std::string msg);
+	virtual void loadGoal(int shotNum);
 };
 
